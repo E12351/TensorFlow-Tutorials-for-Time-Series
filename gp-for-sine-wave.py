@@ -9,7 +9,6 @@
 import numpy as np
 from sklearn.gaussian_process import GaussianProcess
 from matplotlib import pyplot as pl
-%matplotlib inline
 
 np.random.seed(1)
 
@@ -88,7 +87,7 @@ sigma = np.sqrt(MSE)
 
 # Plot the function, the prediction and the 95% confidence interval based on
 # the MSE
-fig = pl.figure()
+pl.figure()
 pl.plot(x, f(x), 'r:', label=u'$f(x) = x\,\sin(x)$')
 pl.errorbar(X.ravel(), y, dy, fmt='r.', markersize=10, label=u'Observations')
 pl.plot(x, y_pred, 'b-', label=u'Prediction')
